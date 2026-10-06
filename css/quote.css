@@ -1,0 +1,48 @@
+/* Quote calculator */
+.calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+select, input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.total {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef;
+}
+.total-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ec9a00;
+}
+.breakdown {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+.note {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+    font-style: italic;
+}
