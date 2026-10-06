@@ -13,7 +13,8 @@
     </script>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
 
     <meta name="description"
         content="Motorcycle rentals and guided tours in Uruguay from $38 per day. Check our immaculately maintained motorbikes and start your adventure. See the motorbikes, Check it now!">
@@ -32,361 +33,305 @@
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/slideshow/cabo-polonio-ranchos.jpg" fetchpriority="high">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/slick.css" />
-
-    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
-    <!--
-
-Tooplate 2127 Little Fashion
-
-https://www.tooplate.com/view/2127-little-fashion
-
--->
+    <link href="css/site.css" rel="stylesheet">
 </head>
 
 <body>
-    <section class="preloader">
-        <div class="spinner">
-            <span class="sk-inner-circle"></span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- layout:header -->
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html" aria-label="Rutamania Adventures home">
+                <img src="images/logo-rutamania.png" alt="Rutamania Adventures" width="200" height="100">
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false"
+                aria-label="Open menu"><i class="bi-list"></i></button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="products.html">Our fleet</a></li>
+                    <li><a href="motorcycle-tours-uruguay.html">Tours</a></li>
+                    <li><a href="best-motorcycle-routes-in-uruguay.html">Routes</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> Book on
+                    WhatsApp</a>
+            </nav>
         </div>
-    </section>
+    </header>
+    <!-- /layout:header -->
 
-    <main>
+    <main id="main">
 
-        <nav class="navbar navbar-expand-lg">
+        <section class="hero">
+            <img class="hero__img" src="images/slideshow/cabo-polonio-ranchos.jpg" alt="Cabo Polonio, Uruguay"
+                width="1920" height="1080" fetchpriority="high">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="eyebrow">Rentals &amp; guided tours</span>
+                <h1>Uruguay by motorcycle</h1>
+                <p>Motorcycle rentals and guided tours in Uruguay from $38 per day.</p>
 
-                <a class="navbar-brand" alt="rutamania adventures" href="index.html">
-                    <img src="images/logo-rutamania.png" class="img-fluid" alt="" width="100px">
-                </a>
+                <div class="hero__actions">
+                    <a href="products.html" class="btn btn--primary">See the motorbikes <i
+                            class="bi-arrow-right"></i></a>
+                    <a href="motorcycle-tours-uruguay.html" class="btn btn--ghost">Guided tours</a>
+                </div>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">HOME</a>
+                <ul class="hero__facts">
+                    <li><i class="bi-cash-coin"></i>From $38/day</li>
+                    <li><i class="bi-truck"></i>Delivery nationwide</li>
+                    <li><i class="bi-geo-alt-fill"></i>Airport pickup</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section--sand" id="fleet">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Our fleet</span>
+                    <h2>Rent a motorcycle in Uruguay</h2>
+                    <p>Immaculately maintained bikes for every kind of trip, from dirt roads to long coastal rides.</p>
+                </div>
+
+                <div class="fleet">
+                    <article class="bike">
+                        <img class="bike__img" src="images/product/off-road-200.jpeg" alt="Off Road 200 motorcycle"
+                            width="956" height="700" loading="lazy">
+                        <span class="bike__tag">Best price</span>
+                        <div class="bike__body">
+                            <h3><a href="offroad-200.html">Off Road 200</a></h3>
+                            <p>A motorcycle designed for off-road lovers. Equipped with big racks for dry packs.</p>
+                            <div class="bike__price">from <strong>$38</strong> /day</div>
+                        </div>
+                    </article>
+
+                    <article class="bike">
+                        <img class="bike__img" src="images/product/zanella-zr200.jpg" alt="Zanella ZR200 motorcycle"
+                            width="1024" height="1024" loading="lazy">
+                        <span class="bike__tag">New arrival</span>
+                        <div class="bike__body">
+                            <h3><a href="zanella-zr200.html">Zanella ZR200</a></h3>
+                            <p>An enduro with quality components, built for adventure and adrenaline in nature and the
+                                city.</p>
+                            <div class="bike__price">from <strong>$42</strong> /day</div>
+                        </div>
+                    </article>
+
+                    <article class="bike">
+                        <img class="bike__img" src="images/product/BMW-G650GS.webp" alt="BMW G650GS motorcycle"
+                            loading="lazy">
+                        <span class="bike__tag">Long trips</span>
+                        <div class="bike__body">
+                            <h3><a href="bmw-g650gs.html">BMW G650GS</a></h3>
+                            <p>A mid-size tourer at home on highways and country roads, and an excellent companion in
+                                the city.</p>
+                            <div class="bike__price">from <strong>$90</strong> /day</div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-foot">
+                    <a href="products.html" class="link-arrow">View all motorcycles <i class="bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="tours">
+            <div class="container split">
+                <img class="split__img" src="images/places/camping-cebollati.webp"
+                    alt="Camping by the Cebollatí river on a motorcycle tour" width="1334" height="750"
+                    loading="lazy">
+                <div>
+                    <span class="eyebrow">Guided tours</span>
+                    <h2>Ride Uruguay with a local</h2>
+                    <p>Two guided rides on the Offroad 200: the rural heart of the country or the coast and hills of
+                        Punta del Este.</p>
+                    <ul class="checklist">
+                        <li><strong>The heart of the rural interior</strong> · 2 days / 1 night, pulperías and
+                            riverside camping</li>
+                        <li><strong>Punta del Este moto tour</strong> · 1 day through Punta Ballena, Piriápolis and the
+                            Sierra de las Ánimas</li>
+                    </ul>
+                    <a href="motorcycle-tours-uruguay.html" class="btn btn--primary">See the tours <i
+                            class="bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--forest">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Why Rutamania</span>
+                    <h2>Ride with locals</h2>
+                </div>
+
+                <ul class="features">
+                    <li class="feature">
+                        <i class="bi-truck"></i>
+                        <h3>We deliver</h3>
+                        <p>We bring the motorcycle to any part of the country.</p>
+                    </li>
+                    <li class="feature">
+                        <i class="bi-geo-alt-fill"></i>
+                        <h3>Airport pickup</h3>
+                        <p>Based in Florida, Uruguay, with pickup for a stress-free start.</p>
+                    </li>
+                    <li class="feature">
+                        <i class="bi-tools"></i>
+                        <h3>Well maintained</h3>
+                        <p>Immaculately maintained motorbikes, ready for the road.</p>
+                    </li>
+                    <li class="feature">
+                        <i class="bi-compass"></i>
+                        <h3>Local knowledge</h3>
+                        <p>Motorcycles and nature are our passions. We know the best roads.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="routes">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Plan your trip</span>
+                    <h2>Routes &amp; guides</h2>
+                </div>
+
+                <div class="routes">
+                    <a class="route route--wide" href="best-motorcycle-routes-in-uruguay.html">
+                        <img src="images/places/ruta-107.jpg" alt="" loading="lazy">
+                        <div class="route__body">
+                            <h3>Best motorcycle routes in Uruguay</h3>
+                            <span>Our favourite rides, coast to countryside</span>
+                        </div>
+                    </a>
+                    <a class="route" href="uruguayan-discovery-trail.html">
+                        <img src="images/places/palmares-de-rocha-vista.jpg" alt="" loading="lazy">
+                        <div class="route__body">
+                            <h3>Uruguayan Discovery Trail</h3>
+                            <span>West to east, cross-country</span>
+                        </div>
+                    </a>
+                    <a class="route" href="uruguayan-route-60.html">
+                        <img src="images/places/ruta-60.jpg" alt="" loading="lazy">
+                        <div class="route__body">
+                            <h3>Route 60</h3>
+                            <span>Panoramic ride from Maldonado to Lavalleja</span>
+                        </div>
+                    </a>
+                    <a class="route" href="uruguayan-hiking-trail-arequita.html">
+                        <img src="images/places/arequita-cima.jpg" alt="" loading="lazy">
+                        <div class="route__body">
+                            <h3>Arequita hiking trail</h3>
+                            <span>Ride, then hike to the top</span>
+                        </div>
+                    </a>
+                    <a class="route" href="travel-in-uruguay.html">
+                        <img src="images/places/punta-del-diablo.jpg" alt="" loading="lazy">
+                        <div class="route__body">
+                            <h3>Travel in Uruguay</h3>
+                            <span>Tips from a local</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--sand" id="contact">
+            <div class="container contact">
+                <div>
+                    <span class="eyebrow">Get in touch</span>
+                    <h2>Ready to ride?</h2>
+                    <p>Tell us your dates and we'll check availability.</p>
+
+                    <ul class="contact-list">
+                        <li><i class="bi-whatsapp"></i>
+                            <div><strong>WhatsApp / Phone</strong><a href="https://wa.me/59899772747">+598 99 772
+                                    747</a></div>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">ABOUT US</a>
+                        <li><i class="bi-envelope"></i>
+                            <div><strong>Email</strong><a href="mailto:info@rutamania.com">info@rutamania.com</a>
+                            </div>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">OUR FLEET</a>
+                        <li><i class="bi-clock"></i>
+                            <div><strong>Hours</strong>Monday – Friday, 10:00 – 19:00 (GMT-3)</div>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        <li><i class="bi-geo-alt-fill"></i>
+                            <div><strong>Office</strong>Florida, Uruguay</div>
                         </li>
                     </ul>
 
+                    <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> Chat on
+                        WhatsApp</a>
                 </div>
-            </div>
-        </nav>
 
-        <section class="slick-slideshow">
-            <div class="slick-custom">
-                <img src="images/slideshow/cabo-polonio-ranchos.jpg" class="img-fluid" alt="cabo polonio uruguay">
-
-                <div class="slick-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-10">
-                                <h1 class="slick-title">Uruguay by motorcycle</h1>
-
-                                <p class="lead text-white mt-lg-3 mb-lg-5">Motorcycle rentals and guided tours in
-                                    Uruguay from $38 per day.</p>
-
-                                <a href="products.html" class="btn custom-btn">See the motorbikes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-custom">
-                <img src="images/places/camping-cebollati.webp" class="img-fluid"
-                    alt="motorcycle tours uruguay camping">
-
-                <div class="slick-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-10">
-                                <h2 class="slick-title">Motorcycle tours</h2>
-
-                                <p class="lead text-white mt-lg-3 mb-lg-5">Tour designed for the adventurous rider
-                                    seeking the soul of Uruguay's countryside. </p>
-
-                                <a href="motorcycle-tours-uruguay.html" alt="motorcycle tours uruguay"
-                                    class="btn custom-btn">Ride the Heart of the Rural Interior</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-custom">
-                <img src="images/slideshow/uruguayan-traveler.jpg" class="img-fluid" alt="">
-
-                <div class="slick-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-10">
-                                <h2 class="slick-title">Best motorcycle rentals</h2>
-
-                                <p class="lead text-white mt-lg-3 mb-lg-5">Guided motorcycle tours and rentals in
-                                    Uruguay</p>
-
-                                <a href="contact.html" class="btn custom-btn">Contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="featured-product section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-5">Rent a motorcycle in Uruguay</h2>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-3">
-                        <div class="product-thumb">
-                            <a href="offroad-200.html" alt="rent motorcycle offroad 200">
-                                <img src="images/product/off-road-200.jpeg" class="img-fluid product-image"
-                                    alt="motorcycle rent uruguay">
-                            </a>
-
-                            <div class="product-top d-flex">
-                                <span class="product-alert me-auto">Low Price</span>
-
-                                <a href="#" class="bi-heart-fill product-icon"></a>
-                            </div>
-
-                            <div class="product-info d-flex">
-                                <div>
-                                    <h5 class="product-title mb-0">
-                                        <a href="offroad-200.html" alt="rent motorcycle offroad 200"
-                                            class="product-title-link">OFF ROAD 200</a>
-                                    </h5>
-
-                                    <p class="product-p">A motorcycle designed for off-road lovers. Equipped with big
-                                        racks for dry packs.</p>
-                                </div>
-
-                                <small class="product-price text-muted ms-auto mt-auto mb-5">$38</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-3">
-                        <div class="product-thumb">
-                            <a href="zanella-zr200.html" alt="rent motorcycle zanella zr 200">
-                                <img src="images/product/zanella-zr200.jpg" class="img-fluid product-image"
-                                    alt="motorcycle rental uruguay">
-                            </a>
-
-                            <div class="product-top d-flex">
-                                <span class="product-alert">New Arrival</span>
-
-                                <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                            </div>
-
-                            <div class="product-info d-flex">
-                                <div>
-                                    <h5 class="product-title mb-0">
-                                        <a href="zanella-zr200.html" class="product-title-link">ZANELLA ZR200</a>
-                                    </h5>
-
-                                    <p class="product-p">A motorcycle designed for lovers of adventure and adrenaline in
-                                        nature and the city. The enduro with quality components.</p>
-                                </div>
-
-                                <small class="product-price text-muted ms-auto mt-auto mb-5">$42</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-3">
-                        <div class="product-thumb">
-                            <a href="bmw-g650gs.html" alt="rent motorcycle zanella zr 200">
-                                <img src="images/product/BMW-G650GS.webp" class="img-fluid product-image"
-                                    alt="motorcycle rental uruguay">
-                            </a>
-
-                            <div class="product-top d-flex">
-                                <span class="product-alert">Experience</span>
-
-                                <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                            </div>
-
-                            <div class="product-info d-flex">
-                                <div>
-                                    <h5 class="product-title mb-0">
-                                        <a href="bmw-g650gs.html" class="product-title-link">BMW G650GS</a>
-                                    </h5>
-
-                                    <p class="product-p">A beauty mid-size motorcycle designed for long trips,
-                                        It is capable of satisfying on highways and country roads, but it is also an
-                                        excellent companion in the city.</p>
-                                </div>
-
-                                <small class="product-price text-muted ms-auto mt-auto mb-5">$90</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 text-center">
-                        <a href="products.html" class="view-all">View All Motorcycles</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="front-product">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-12">
-                        <div class="px-5 py-5 py-lg-0">
-
-                            <h2 class="mb-4">2 DAYS MOTORCYCLE TOUR</h2>
-
-                            <p class="lead mb-4">We offer tours designed for riders seeking the soul of Uruguay's
-                                countryside. You'll trace the historic routes of the central departments of Florida and
-                                Lavalleja.</p>
-
-                            <a href="motorcycle-tours-uruguay.html" alt="motorcycle tours uruguay" class="custom-link">
-                                Check Our Motorcycle Tours
-                                <i class="bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <img src="images/places/camping-cebollati.webp" class="img-fluid"
-                            alt="motorcycle tours uruguay">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12 mt-auto mb-auto">
-                        <h4 class="mb-3">We deliver motorcycles to any part of the country</h4>
-                        <h6 class="mb-3">Our Office</h6>
-                        <p class="text-muted">Florida, Uruguay</p>
-                        <h6 class="mb-3">Email</h6>
-                        <a href="mailto:info@rutamania.com" class="custom-link">
-                            info@rutamania.com
-                            <i class="bi-arrow-right ms-2"></i>
-                        </a>
-                        <h6 class="mb-3">Mobile</h6>
-                        <p class="text-muted">+598 99772747 | Monday – Friday 10:00 – 19:00 GMT -3</p>
-                        <a aria-label="Chat on WhatsApp" href="https://wa.me/59899772747"><img alt="Chat on WhatsApp"
-                                src="images/whatsapp-button.png" />
-                        </a>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="tab-content mt-2" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                                aria-labelledby="pills-home-tab">
-
-                                <div class="row">
-                                    <div class="col-lg-7 col-12">
-                                        <iframe
-                                            src="https://maps.google.com/maps?q=-34.100435, -56.216181&z=7&output=embed"
-                                            width="600" height="450" frameborder="0" style="border:0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
+                <iframe class="map" title="Map of Florida, Uruguay"
+                    src="https://maps.google.com/maps?q=-34.100435,-56.216181&z=7&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
     </main>
 
+    <!-- layout:footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-10 me-auto mb-4">
-                    <h4 class="text-white mb-3"><a href="index.html">Rutamania Adventures</a></h4>
-                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little
-                            Fashion</strong></p>
-                    <br>
-                    <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
-                            target="_blank">Tooplate</a></p>
+            <div class="footer-grid">
+                <div>
+                    <h4>Rutamania Adventures</h4>
+                    <p>Motorcycle rentals and guided tours in Uruguay. We deliver motorcycles to any part of the
+                        country.</p>
+                    <div class="social">
+                        <a href="https://www.instagram.com/rutamania.adventures" aria-label="Instagram"><i
+                                class="bi-instagram"></i></a>
+                        <a href="https://wa.me/59899772747" aria-label="WhatsApp"><i class="bi-whatsapp"></i></a>
+                        <a href="mailto:info@rutamania.com" aria-label="Email"><i class="bi-envelope"></i></a>
+                    </div>
                 </div>
 
-                <div class="col-lg-5 col-8">
-                    <h5 class="text-white mb-3">Sitemap</h5>
-
-                    <ul class="footer-menu d-flex flex-wrap">
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">ABOUT US</a></li>
-
-                        <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">OUR FLEET</a></li>
-
-                        <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-
-                        <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">CONTACT</a></li>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="products.html">Our fleet</a></li>
+                        <li><a href="motorcycle-tours-uruguay.html">Motorcycle tours</a></li>
+                        <li><a href="best-motorcycle-routes-in-uruguay.html">Best routes</a></li>
+                        <li><a href="travel-in-uruguay.html">Travel in Uruguay</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-4">
-                    <h5 class="text-white mb-3">Social</h5>
-
-                    <ul class="social-icon">
-
-                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
-
-                        <li><a href="https://wa.me/59899772747" class="social-icon-link bi-whatsapp"></a></li>
-
-                        <li><a href="https://www.instagram.com/rutamania.adventures"
-                                class="social-icon-link bi-instagram"></a></li>
-
-                        <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
+
+            <p class="copyright">© 2026 Rutamania Adventures. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/custom.js"></script>
+    <div class="action-bar">
+        <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> WhatsApp</a>
+        <a class="btn btn--primary" href="products.html">See bikes</a>
+    </div>
+    <!-- /layout:footer -->
+
+    <script src="js/site.js" defer></script>
 
 </body>
 
