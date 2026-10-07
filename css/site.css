@@ -129,6 +129,10 @@ p {
   margin-bottom: 32px;
 }
 
+.section-head--spaced {
+  margin-top: 56px;
+}
+
 .section-head p {
   color: var(--ink-soft);
   max-width: 560px;
@@ -451,6 +455,76 @@ body.nav-open {
 .section-foot {
   margin-top: 24px;
   text-align: center;
+}
+
+/*---------------------------------------
+  How to rent steps
+-----------------------------------------*/
+.min-rental {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 18px 22px;
+  border-radius: var(--radius);
+  background: var(--forest);
+  color: var(--white);
+}
+
+.min-rental i {
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+.min-rental p {
+  margin: 0;
+}
+
+.min-rental strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  padding: 24px 22px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.step__num {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+}
+
+.step p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .95rem;
 }
 
 /*---------------------------------------
@@ -1184,6 +1258,10 @@ body.nav-open {
     grid-template-columns: 1fr 1fr;
   }
 
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
@@ -1275,6 +1353,11 @@ body.nav-open {
   .split {
     grid-template-columns: 1fr 1fr;
     gap: 64px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
   }
 
   .features {
