@@ -1126,6 +1126,136 @@ body.nav-open {
   color: var(--ink-soft);
 }
 
+.quote__panel h2:focus {
+  outline: none;
+}
+
+/* Booking questionnaire (swaps in place of the quote calculator) */
+.booking__back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  margin-bottom: 8px;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.booking__back:hover {
+  color: var(--orange-dark);
+}
+
+.booking__summary {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--sand);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.booking__group {
+  margin: 20px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.booking__group legend {
+  width: 100%;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--sand-dark);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.field .choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.field .choices label {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 16px;
+  border: 1px solid #cfc6b6;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s;
+}
+
+.field .choices label:has(input:checked) {
+  border-color: var(--orange);
+  background: #fdf1e2;
+}
+
+.field .choices input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--orange);
+}
+
+.field .choices input:focus {
+  outline: none;
+}
+
+.field .choices label:has(input:focus-visible) {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.field-row {
+  display: grid;
+  gap: 0 16px;
+}
+
+.booking__error {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fde8e6;
+  color: #9b1c12;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.booking__submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (min-width: 640px) {
+  .field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /*---------------------------------------
   Accordions (FAQ, rental terms)
 -----------------------------------------*/

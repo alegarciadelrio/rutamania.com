@@ -62,8 +62,6 @@
                     <li><a href="faq.html">FAQs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> Book on
-                    WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -106,8 +104,9 @@
 
         <section class="section section--sand">
             <div class="container split">
-                <form class="quote" id="quote">
-                    <h2>Quote now</h2>
+                <div class="quote">
+                <form id="quote" class="quote__panel">
+                    <h2 tabindex="-1">Quote now</h2>
 
                     <div class="field">
                         <label for="motorbike">Motorbike</label>
@@ -159,9 +158,178 @@
                     </div>
                     <p class="quote__note">Price includes basic insurance. Additional insurance options available on
                         pickup.</p>
-                    <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> Book on
-                        WhatsApp</a>
+                    <button class="btn btn--primary booking__submit" type="button" id="startBooking"><i
+                            class="bi-clipboard-check"></i> Request booking</button>
                 </form>
+
+                <form id="booking" class="quote__panel booking" hidden novalidate>
+                    <button class="booking__back" type="button" id="backToQuote"><i class="bi-arrow-left"></i> Back to
+                        quote</button>
+                    <h2 tabindex="-1">Booking request</h2>
+                    <p class="booking__summary" id="bookingSummary"></p>
+
+                    <fieldset class="booking__group">
+                        <legend>About you</legend>
+
+                        <div class="field">
+                            <label for="b-name">Name</label>
+                            <input type="text" id="b-name" name="Name" autocomplete="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="b-nationality">What is your nationality?</label>
+                            <input type="text" id="b-nationality" name="Nationality" autocomplete="country-name"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label for="b-nationalities">Do you have more than one nationality? Please list all your
+                                nationalities separated by commas.</label>
+                            <input type="text" id="b-nationalities" name="Other nationalities"
+                                placeholder="Leave empty if only one">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__group">
+                        <legend>Riding</legend>
+
+                        <div class="field">
+                            <span class="field__label" id="q-license">Do you hold a valid motorcycle
+                                license/endorsement from your home country and an International Driving
+                                Permit?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-license">
+                                <label><input type="radio" name="License + IDP" value="Yes, both" required>
+                                    Yes, both</label>
+                                <label><input type="radio" name="License + IDP" value="Only home license"> Only home
+                                    license</label>
+                                <label><input type="radio" name="License + IDP" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="b-years">How many years of active riding experience do you have?</label>
+                            <input type="number" id="b-years" name="Years riding" min="0" max="80"
+                                inputmode="numeric" required>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-traveled">Have you ever traveled by motorcycle?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-traveled">
+                                <label><input type="radio" name="Motorcycle travel before" value="Yes" required>
+                                    Yes</label>
+                                <label><input type="radio" name="Motorcycle travel before" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-mechanic">Do you have any mechanical knowledge?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-mechanic">
+                                <label><input type="radio" name="Mechanical knowledge" value="None" required>
+                                    None</label>
+                                <label><input type="radio" name="Mechanical knowledge" value="Basic"> Basic</label>
+                                <label><input type="radio" name="Mechanical knowledge" value="Advanced">
+                                    Advanced</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-gear">Will you be bringing your own riding gear (helmet,
+                                jacket, gloves)?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-gear">
+                                <label><input type="radio" name="Own riding gear" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="Own riding gear" value="Some of it"> Some of
+                                    it</label>
+                                <label><input type="radio" name="Own riding gear" value="No"> No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__group">
+                        <legend>Health</legend>
+
+                        <div class="field">
+                            <span class="field__label" id="q-meds">Are you currently taking any medication that
+                                advises against driving?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-meds">
+                                <label><input type="radio" name="Medication against driving" value="Yes" required>
+                                    Yes</label>
+                                <label><input type="radio" name="Medication against driving" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-conditions">Do you have any medical conditions that could
+                                cause a sudden loss of consciousness, dizziness, or seizures?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-conditions">
+                                <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
+                                        value="Yes" required> Yes</label>
+                                <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
+                                        value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-vision">Do you require vision correction (glasses or
+                                contacts) to drive?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-vision">
+                                <label><input type="radio" name="Vision correction" value="No" required> No</label>
+                                <label><input type="radio" name="Vision correction"
+                                        value="Yes, and I will have them with me"> Yes, I'll have them</label>
+                                <label><input type="radio" name="Vision correction"
+                                        value="Yes, but I will NOT have them with me"> Yes, but I won't have
+                                    them</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-joints">Do you have any back, knee, or wrist issues that
+                                might be aggravated by the riding position of this bike?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-joints">
+                                <label><input type="radio" name="Back/knee/wrist issues" value="Yes" required>
+                                    Yes</label>
+                                <label><input type="radio" name="Back/knee/wrist issues" value="No"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <span class="field__label" id="q-bees">Are you allergic to bees?</span>
+                            <div class="choices" role="radiogroup" aria-labelledby="q-bees">
+                                <label><input type="radio" name="Bee allergy" value="Yes" required> Yes</label>
+                                <label><input type="radio" name="Bee allergy" value="No"> No</label>
+                                <label><input type="radio" name="Bee allergy" value="Not sure"> Not sure</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="b-allergies">Any other allergies?</label>
+                            <input type="text" id="b-allergies" name="Other allergies"
+                                placeholder="Leave empty if none">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="booking__group">
+                        <legend>Dates</legend>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="b-start">Preferred start (date and time)</label>
+                                <input type="datetime-local" id="b-start" name="Start" required>
+                            </div>
+                            <div class="field">
+                                <label for="b-end">Preferred end (date and time)</label>
+                                <input type="datetime-local" id="b-end" name="End" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <p class="booking__error" id="bookingError" role="alert" hidden></p>
+
+                    <button class="btn btn--whatsapp booking__submit" type="submit"><i class="bi-whatsapp"></i> Send
+                        request on WhatsApp</button>
+                    <p class="quote__note">Your answers and quote open as a WhatsApp message to us. Nothing is sent
+                        until you press send in WhatsApp.</p>
+                </form>
+                </div>
 
                 <div>
                     <h2>Rent requirements</h2>
@@ -287,6 +455,7 @@
 
     <script src="js/site.js" defer></script>
     <script src="js/quote.js" defer></script>
+    <script src="js/booking.js" defer></script>
 </body>
 
 </html>
