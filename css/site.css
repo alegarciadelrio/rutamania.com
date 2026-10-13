@@ -993,9 +993,28 @@ body.nav-open {
 /*---------------------------------------
   Bike detail
 -----------------------------------------*/
+/* Mobile: photo and specs, then the booking form, then requirements and terms.
+   Desktop: the booking form sits in a right column next to the bike. */
 .bike-detail {
   display: grid;
+  grid-template-areas: "intro" "booking" "info";
   gap: 32px;
+}
+
+.bike-detail__intro {
+  grid-area: intro;
+}
+
+.bike-detail__booking {
+  grid-area: booking;
+}
+
+.bike-detail__info {
+  grid-area: info;
+}
+
+.bike-detail__intro .bike-detail__img {
+  margin-bottom: 24px;
 }
 
 .bike-detail__img {
@@ -1061,6 +1080,32 @@ body.nav-open {
 
 .quote h2 {
   font-size: 2rem;
+}
+
+.booking__step {
+  margin: 0 0 2px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+}
+
+.quote__perk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fdf1e2;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.quote__perk i {
+  font-size: 1.3rem;
+  color: var(--orange);
 }
 
 .field {
@@ -1352,6 +1397,10 @@ body.nav-open {
   font-size: .95rem;
 }
 
+.action-bar--single {
+  grid-template-columns: 1fr;
+}
+
 /*---------------------------------------
   Tablet ≥ 640px
 -----------------------------------------*/
@@ -1540,14 +1589,17 @@ body.nav-open {
   }
 
   .bike-detail {
-    grid-template-columns: 1.1fr 1fr;
-    gap: 56px;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "intro booking"
+      "info booking";
+    gap: 40px 56px;
     align-items: start;
   }
 
-  .bike-detail__media {
-    position: sticky;
-    top: calc(var(--header-h) + 24px);
+  .bike-detail .field-row {
+    grid-template-columns: 1fr;
   }
 
   .gallery {
@@ -1556,5 +1608,18 @@ body.nav-open {
 
   .tag-groups {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Keep the booking form in view while scrolling the bike details, but only on
+   screens tall enough to show it whole, and not during the longer step 2. */
+@media (min-width: 960px) and (min-height: 1100px) {
+  .bike-detail__booking {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+
+  .bike-detail__booking:has(#booking:not([hidden])) {
+    position: static;
   }
 }

@@ -70,17 +70,15 @@
     <main id="main">
         <section class="section">
             <div class="container bike-detail">
-                <div class="bike-detail__media">
+                <div class="bike-detail__intro">
                     <img class="bike-detail__img" src="images/product/zanella-zr200.jpg" alt="Zanella ZR200 motorcycle for rent in Uruguay" width="1024" height="1024"
                         fetchpriority="high">
-                </div>
 
-                <div>
                     <span class="eyebrow"><a href="products.html" class="link-arrow"><i class="bi-arrow-left"></i>
                             Our fleet</a></span>
                     <h1>Zanella ZR200</h1>
                     <p class="lead">A motorcycle designed for off-road lovers. Equipped with panniers and big racks for dry packs.</p>
-                    <p class="bike-detail__price">from <strong>$42</strong> /day · minimum 10 days</p>
+                    <p class="bike-detail__price">from <strong>$65</strong> /day · minimum 10 days</p>
 
                     <dl class="specs">
                         <div><dt>Engine</dt><dd>200cc single, 4-stroke, OHC</dd></div>
@@ -92,246 +90,240 @@
                         <div><dt>Luggage</dt><dd>Panniers, front & rear racks</dd></div>
                         <div><dt>Minimum rental</dt><dd>10 days</dd></div>
                     </dl>
-
-                    <div class="btn-row">
-                        <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> Check
-                            availability</a>
-                        <a class="btn btn--primary" href="#quote">Get a quote</a>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section section--sand">
-            <div class="container split">
-                <div class="quote">
-                <form id="quote" class="quote__panel">
-                    <h2 tabindex="-1">Quote now</h2>
-
-                    <div class="field">
-                        <label for="motorbike">Motorbike</label>
-                        <select id="motorbike" name="motorbike">
-                                    <option value="38">Offroad 200 ($38 per day)</option>
-                                    <option value="42" selected>Zanella ZR200 ($42 per day)</option>
-                                    <option value="90">BMW G650GS ($90 per day)</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="days">Number of days (10 days minimum)</label>
-                        <input type="number" id="days" name="days" min="10" value="10" inputmode="numeric">
-                    </div>
-
-                    <div class="field">
-                        <label for="pickup">Pickup location</label>
-                        <select id="pickup" name="pickup">
-                                    <option value="0">Florida shop (free)</option>
-                                    <option value="140">Montevideo ($140)</option>
-                                    <option value="140">Montevideo Airport ($140)</option>
-                                    <option value="220">Colonia ($220)</option>
-                                    <option value="220">Punta del Este ($220)</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="return">Return location</label>
-                        <select id="return" name="return">
-                                    <option value="0">Florida shop (free)</option>
-                                    <option value="140">Montevideo ($140)</option>
-                                    <option value="140">Montevideo Airport ($140)</option>
-                                    <option value="220">Colonia ($220)</option>
-                                    <option value="220">Punta del Este ($220)</option>
-                        </select>
-                    </div>
-
-                    <div class="quote__total" aria-live="polite">
-                        <dl>
-                            <dt>Rental</dt>
-                            <dd id="rentalCost">$0</dd>
-                            <dt>Pickup fee</dt>
-                            <dd id="pickupFee">$0</dd>
-                            <dt>Return fee</dt>
-                            <dd id="returnFee">$0</dd>
-                            <dt class="quote__grand">Total</dt>
-                            <dd class="quote__grand" id="totalAmount">$0</dd>
-                        </dl>
-                    </div>
-                    <p class="quote__note">Price includes basic insurance. Additional insurance options available on
-                        pickup.</p>
-                    <button class="btn btn--primary booking__submit" type="button" id="startBooking"><i
-                            class="bi-clipboard-check"></i> Request booking</button>
-                </form>
-
-                <form id="booking" class="quote__panel booking" hidden novalidate>
-                    <button class="booking__back" type="button" id="backToQuote"><i class="bi-arrow-left"></i> Back to
-                        quote</button>
-                    <h2 tabindex="-1">Booking request</h2>
-                    <p class="booking__summary" id="bookingSummary"></p>
-
-                    <fieldset class="booking__group">
-                        <legend>About you</legend>
+                <aside class="bike-detail__booking">
+                    <div class="quote" data-bike="zanella-zr200">
+                    <!-- layout:booking -->
+                    <form id="quote" class="quote__panel" novalidate>
+                        <p class="booking__step">Step 1 of 2</p>
+                        <h2 tabindex="-1">Plan your trip</h2>
+                        <p class="quote__perk"><i class="bi-truck" aria-hidden="true"></i> Delivery and return in
+                            Montevideo or at the airport are included.</p>
 
                         <div class="field">
-                            <label for="b-name">Name</label>
-                            <input type="text" id="b-name" name="Name" autocomplete="name" required>
+                            <label for="motorbike">Motorbike</label>
+                            <select id="motorbike" name="Motorbike">
+                                <option value="offroad-200" data-price="59">Offroad 200 ($59 per day)</option>
+                                <option value="zanella-zr200" data-price="65">Zanella ZR200 ($65 per day)</option>
+                                <option value="bmw-g650gs" data-price="99">BMW G650GS ($99 per day)</option>
+                            </select>
                         </div>
-
-                        <div class="field">
-                            <label for="b-nationality">What is your nationality?</label>
-                            <input type="text" id="b-nationality" name="Nationality" autocomplete="country-name"
-                                required>
-                        </div>
-
-                        <div class="field">
-                            <label for="b-nationalities">Do you have more than one nationality? Please list all your
-                                nationalities separated by commas.</label>
-                            <input type="text" id="b-nationalities" name="Other nationalities"
-                                placeholder="Leave empty if only one">
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="booking__group">
-                        <legend>Riding</legend>
-
-                        <div class="field">
-                            <span class="field__label" id="q-license">Do you hold a valid motorcycle
-                                license/endorsement from your home country and an International Driving
-                                Permit?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-license">
-                                <label><input type="radio" name="License + IDP" value="Yes, both" required>
-                                    Yes, both</label>
-                                <label><input type="radio" name="License + IDP" value="Only home license"> Only home
-                                    license</label>
-                                <label><input type="radio" name="License + IDP" value="No"> No</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label for="b-years">How many years of active riding experience do you have?</label>
-                            <input type="number" id="b-years" name="Years riding" min="0" max="80"
-                                inputmode="numeric" required>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-traveled">Have you ever traveled by motorcycle?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-traveled">
-                                <label><input type="radio" name="Motorcycle travel before" value="Yes" required>
-                                    Yes</label>
-                                <label><input type="radio" name="Motorcycle travel before" value="No"> No</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-mechanic">Do you have any mechanical knowledge?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-mechanic">
-                                <label><input type="radio" name="Mechanical knowledge" value="None" required>
-                                    None</label>
-                                <label><input type="radio" name="Mechanical knowledge" value="Basic"> Basic</label>
-                                <label><input type="radio" name="Mechanical knowledge" value="Advanced">
-                                    Advanced</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-gear">Will you be bringing your own riding gear (helmet,
-                                jacket, gloves)?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-gear">
-                                <label><input type="radio" name="Own riding gear" value="Yes" required> Yes</label>
-                                <label><input type="radio" name="Own riding gear" value="Some of it"> Some of
-                                    it</label>
-                                <label><input type="radio" name="Own riding gear" value="No"> No</label>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="booking__group">
-                        <legend>Health</legend>
-
-                        <div class="field">
-                            <span class="field__label" id="q-meds">Are you currently taking any medication that
-                                advises against driving?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-meds">
-                                <label><input type="radio" name="Medication against driving" value="Yes" required>
-                                    Yes</label>
-                                <label><input type="radio" name="Medication against driving" value="No"> No</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-conditions">Do you have any medical conditions that could
-                                cause a sudden loss of consciousness, dizziness, or seizures?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-conditions">
-                                <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
-                                        value="Yes" required> Yes</label>
-                                <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
-                                        value="No"> No</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-vision">Do you require vision correction (glasses or
-                                contacts) to drive?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-vision">
-                                <label><input type="radio" name="Vision correction" value="No" required> No</label>
-                                <label><input type="radio" name="Vision correction"
-                                        value="Yes, and I will have them with me"> Yes, I'll have them</label>
-                                <label><input type="radio" name="Vision correction"
-                                        value="Yes, but I will NOT have them with me"> Yes, but I won't have
-                                    them</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-joints">Do you have any back, knee, or wrist issues that
-                                might be aggravated by the riding position of this bike?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-joints">
-                                <label><input type="radio" name="Back/knee/wrist issues" value="Yes" required>
-                                    Yes</label>
-                                <label><input type="radio" name="Back/knee/wrist issues" value="No"> No</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <span class="field__label" id="q-bees">Are you allergic to bees?</span>
-                            <div class="choices" role="radiogroup" aria-labelledby="q-bees">
-                                <label><input type="radio" name="Bee allergy" value="Yes" required> Yes</label>
-                                <label><input type="radio" name="Bee allergy" value="No"> No</label>
-                                <label><input type="radio" name="Bee allergy" value="Not sure"> Not sure</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label for="b-allergies">Any other allergies?</label>
-                            <input type="text" id="b-allergies" name="Other allergies"
-                                placeholder="Leave empty if none">
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="booking__group">
-                        <legend>Dates</legend>
 
                         <div class="field-row">
                             <div class="field">
-                                <label for="b-start">Preferred start (date and time)</label>
-                                <input type="datetime-local" id="b-start" name="Start" required>
+                                <label for="q-start">Pickup (date and time)</label>
+                                <input type="datetime-local" id="q-start" name="Start" required>
                             </div>
                             <div class="field">
-                                <label for="b-end">Preferred end (date and time)</label>
-                                <input type="datetime-local" id="b-end" name="End" required>
+                                <label for="q-end">Return (date and time)</label>
+                                <input type="datetime-local" id="q-end" name="End" required>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <p class="booking__error" id="bookingError" role="alert" hidden></p>
+                        <div class="field">
+                            <label for="pickup">Pickup location</label>
+                            <select id="pickup" name="Pickup">
+                                <option value="Montevideo" data-fee="0">Montevideo (included)</option>
+                                <option value="Montevideo Airport" data-fee="0">Montevideo Airport (included)</option>
+                                <option value="Florida shop" data-fee="-75">Florida shop (save $75)</option>
+                                <option value="Colonia" data-fee="80">Colonia (+$80)</option>
+                                <option value="Punta del Este" data-fee="80">Punta del Este (+$80)</option>
+                            </select>
+                        </div>
 
-                    <button class="btn btn--whatsapp booking__submit" type="submit"><i class="bi-whatsapp"></i> Send
-                        request on WhatsApp</button>
-                    <p class="quote__note">Your answers and quote open as a WhatsApp message to us. Nothing is sent
-                        until you press send in WhatsApp.</p>
-                </form>
-                </div>
+                        <div class="field">
+                            <label for="return">Return location</label>
+                            <select id="return" name="Return">
+                                <option value="Montevideo" data-fee="0">Montevideo (included)</option>
+                                <option value="Montevideo Airport" data-fee="0">Montevideo Airport (included)</option>
+                                <option value="Florida shop" data-fee="-75">Florida shop (save $75)</option>
+                                <option value="Colonia" data-fee="80">Colonia (+$80)</option>
+                                <option value="Punta del Este" data-fee="80">Punta del Este (+$80)</option>
+                            </select>
+                        </div>
 
-                <div>
+                        <div class="quote__total" aria-live="polite">
+                            <dl>
+                                <dt id="rentalLabel">Rental</dt>
+                                <dd id="rentalCost">$0</dd>
+                                <dt>Delivery &amp; return in Montevideo</dt>
+                                <dd>Included</dd>
+                                <dt id="discountLabel" hidden>Florida shop discount</dt>
+                                <dd id="discountAmount" hidden>$0</dd>
+                                <dt id="extraLabel" hidden>Delivery outside Montevideo</dt>
+                                <dd id="extraAmount" hidden>$0</dd>
+                                <dt class="quote__grand">Total</dt>
+                                <dd class="quote__grand" id="totalAmount">$0</dd>
+                            </dl>
+                        </div>
+                        <p class="quote__note" id="quoteHint">Minimum 10 days, counted from the pickup date to the
+                            return date (12 to 22 October is 10 days). Basic insurance included.</p>
+
+                        <p class="booking__error" id="quoteError" role="alert" hidden></p>
+
+                        <button class="btn btn--primary booking__submit" type="submit"><i class="bi-arrow-right"></i>
+                            Continue to your details</button>
+                    </form>
+
+                    <form id="booking" class="quote__panel booking" hidden novalidate>
+                        <button class="booking__back" type="button" id="backToQuote"><i class="bi-arrow-left"></i> Back to
+                            your trip</button>
+                        <p class="booking__step">Step 2 of 2</p>
+                        <h2 tabindex="-1">Your details</h2>
+                        <p class="booking__summary" id="bookingSummary"></p>
+
+                        <fieldset class="booking__group">
+                            <legend>About you</legend>
+
+                            <div class="field">
+                                <label for="b-name">Name</label>
+                                <input type="text" id="b-name" name="Name" autocomplete="name" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="b-nationality">What is your nationality?</label>
+                                <input type="text" id="b-nationality" name="Nationality" autocomplete="country-name"
+                                    required>
+                            </div>
+
+                            <div class="field">
+                                <label for="b-nationalities">Do you have more than one nationality? Please list all your
+                                    nationalities separated by commas.</label>
+                                <input type="text" id="b-nationalities" name="Other nationalities"
+                                    placeholder="Leave empty if only one">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="booking__group">
+                            <legend>Riding</legend>
+
+                            <div class="field">
+                                <span class="field__label" id="q-license">Do you hold a valid motorcycle
+                                    license/endorsement from your home country and an International Driving
+                                    Permit?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-license">
+                                    <label><input type="radio" name="License + IDP" value="Yes, both" required>
+                                        Yes, both</label>
+                                    <label><input type="radio" name="License + IDP" value="Only home license"> Only home
+                                        license</label>
+                                    <label><input type="radio" name="License + IDP" value="No"> No</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="b-years">How many years of active riding experience do you have?</label>
+                                <input type="number" id="b-years" name="Years riding" min="0" max="80"
+                                    inputmode="numeric" required>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-traveled">Have you ever traveled by motorcycle?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-traveled">
+                                    <label><input type="radio" name="Motorcycle travel before" value="Yes" required>
+                                        Yes</label>
+                                    <label><input type="radio" name="Motorcycle travel before" value="No"> No</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-mechanic">Do you have any mechanical knowledge?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-mechanic">
+                                    <label><input type="radio" name="Mechanical knowledge" value="None" required>
+                                        None</label>
+                                    <label><input type="radio" name="Mechanical knowledge" value="Basic"> Basic</label>
+                                    <label><input type="radio" name="Mechanical knowledge" value="Advanced">
+                                        Advanced</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-gear">Will you be bringing your own riding gear (helmet,
+                                    jacket, gloves)?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-gear">
+                                    <label><input type="radio" name="Own riding gear" value="Yes" required> Yes</label>
+                                    <label><input type="radio" name="Own riding gear" value="Some of it"> Some of
+                                        it</label>
+                                    <label><input type="radio" name="Own riding gear" value="No"> No</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="booking__group">
+                            <legend>Health</legend>
+
+                            <div class="field">
+                                <span class="field__label" id="q-meds">Are you currently taking any medication that
+                                    advises against driving?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-meds">
+                                    <label><input type="radio" name="Medication against driving" value="Yes" required>
+                                        Yes</label>
+                                    <label><input type="radio" name="Medication against driving" value="No"> No</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-conditions">Do you have any medical conditions that could
+                                    cause a sudden loss of consciousness, dizziness, or seizures?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-conditions">
+                                    <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
+                                            value="Yes" required> Yes</label>
+                                    <label><input type="radio" name="Conditions (consciousness/dizziness/seizures)"
+                                            value="No"> No</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-vision">Do you require vision correction (glasses or
+                                    contacts) to drive?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-vision">
+                                    <label><input type="radio" name="Vision correction" value="No" required> No</label>
+                                    <label><input type="radio" name="Vision correction"
+                                            value="Yes, and I will have them with me"> Yes, I'll have them</label>
+                                    <label><input type="radio" name="Vision correction"
+                                            value="Yes, but I will NOT have them with me"> Yes, but I won't have
+                                        them</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-joints">Do you have any back, knee, or wrist issues that
+                                    might be aggravated by the riding position of this bike?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-joints">
+                                    <label><input type="radio" name="Back/knee/wrist issues" value="Yes" required>
+                                        Yes</label>
+                                    <label><input type="radio" name="Back/knee/wrist issues" value="No"> No</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <span class="field__label" id="q-bees">Are you allergic to bees?</span>
+                                <div class="choices" role="radiogroup" aria-labelledby="q-bees">
+                                    <label><input type="radio" name="Bee allergy" value="Yes" required> Yes</label>
+                                    <label><input type="radio" name="Bee allergy" value="No"> No</label>
+                                    <label><input type="radio" name="Bee allergy" value="Not sure"> Not sure</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="b-allergies">Any other allergies?</label>
+                                <input type="text" id="b-allergies" name="Other allergies"
+                                    placeholder="Leave empty if none">
+                            </div>
+                        </fieldset>
+
+                        <p class="booking__error" id="bookingError" role="alert" hidden></p>
+
+                        <button class="btn btn--whatsapp booking__submit" type="submit"><i class="bi-whatsapp"></i> Send
+                            request on WhatsApp</button>
+                        <p class="quote__note">Your trip and answers open as a WhatsApp message to us. Nothing is sent
+                            until you press send in WhatsApp. We reply to confirm availability and the final price.</p>
+                    </form>
+                    <!-- /layout:booking -->
+                    </div>
+                </aside>
+
+                <div class="bike-detail__info">
                     <h2>Rent requirements</h2>
                     <ul class="checklist">
                         <li>Valid motorcycle/rider license for this type of bike</li>
@@ -350,8 +342,8 @@
                             <div>
                                 <ul>
                                     <li>Motorcycles are delivered with a 12 V outlet for GPS.</li>
-                                    <li>The rate is per day. Rentals are calculated on calendar days: pickup and return
-                                        days count as full days regardless of the time.</li>
+                                    <li>The rate is per day. Days are counted from the pickup date to the return
+                                        date: 12 to 22 October is 10 days.</li>
                                     <li>30% of the total rental value is required as a reservation. The full payment
                                         must be made before delivery.</li>
                                     <li>Rates include 200 km per day. Each additional kilometer costs $5.</li>
@@ -387,7 +379,7 @@
                         <div class="bike__body">
                             <h3><a href="offroad-200.html">Offroad 200</a></h3>
                             <p>A motorcycle designed for off-road lovers. Equipped with big racks for dry packs.</p>
-                            <div class="bike__price">from <strong>$38</strong> /day</div>
+                            <div class="bike__price">from <strong>$59</strong> /day</div>
                         </div>
                     </article>
 
@@ -398,7 +390,7 @@
                         <div class="bike__body">
                             <h3><a href="bmw-g650gs.html">BMW G650GS</a></h3>
                             <p>A mid-size tourer at home on highways and country roads, and an excellent companion in the city.</p>
-                            <div class="bike__price">from <strong>$90</strong> /day</div>
+                            <div class="bike__price">from <strong>$99</strong> /day</div>
                         </div>
                     </article>
                 </div>
@@ -447,14 +439,12 @@
         </div>
     </footer>
 
-    <div class="action-bar">
-        <a class="btn btn--whatsapp" href="https://wa.me/59899772747"><i class="bi-whatsapp"></i> WhatsApp</a>
-        <a class="btn btn--primary" href="products.html">See bikes</a>
+    <div class="action-bar action-bar--single">
+        <a class="btn btn--primary" href="#quote">Book this bike</a>
     </div>
     <!-- /layout:footer -->
 
     <script src="js/site.js" defer></script>
-    <script src="js/quote.js" defer></script>
     <script src="js/booking.js" defer></script>
 </body>
 
