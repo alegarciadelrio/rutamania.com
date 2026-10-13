@@ -129,10 +129,6 @@ p {
   margin-bottom: 32px;
 }
 
-.section-head--spaced {
-  margin-top: 56px;
-}
-
 .section-head p {
   color: var(--ink-soft);
   max-width: 560px;
@@ -229,7 +225,6 @@ p {
   top: 0;
   z-index: 50;
   background: rgba(255, 255, 255, .96);
-  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--sand-dark);
 }
 
@@ -458,13 +453,13 @@ body.nav-open {
 }
 
 /*---------------------------------------
-  How to rent steps
+  Minimum rental banner
 -----------------------------------------*/
 .min-rental {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 28px;
+  margin: 28px 0;
   padding: 18px 22px;
   border-radius: var(--radius);
   background: var(--forest);
@@ -486,45 +481,6 @@ body.nav-open {
   font-size: 1.6rem;
   line-height: 1.1;
   text-transform: uppercase;
-}
-
-.steps {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.step {
-  padding: 24px 22px;
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.step__num {
-  display: inline-grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-  border-radius: 50%;
-  background: var(--orange);
-  color: var(--white);
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.step h3 {
-  font-size: 1.3rem;
-}
-
-.step p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: .95rem;
 }
 
 /*---------------------------------------
@@ -1438,9 +1394,6 @@ body.nav-open {
     grid-template-columns: 1fr 1fr;
   }
 
-  .steps {
-    grid-template-columns: 1fr 1fr;
-  }
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -1470,6 +1423,12 @@ body.nav-open {
 
   .brand img {
     width: 130px;
+  }
+
+  /* Desktop only: backdrop-filter makes the header the containing block of
+     position: fixed children, which would squash the mobile menu drawer. */
+  .site-header {
+    backdrop-filter: blur(8px);
   }
 
   .nav-toggle {
@@ -1535,10 +1494,6 @@ body.nav-open {
     gap: 64px;
   }
 
-  .steps {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
 
   .features {
     grid-template-columns: repeat(4, 1fr);
