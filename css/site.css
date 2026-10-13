@@ -1398,7 +1398,8 @@ body.nav-open {
 }
 
 .action-bar--single {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 360px);
+  justify-content: center;
 }
 
 /*---------------------------------------
